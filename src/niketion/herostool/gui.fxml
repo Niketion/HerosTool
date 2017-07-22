@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #DF6161;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="niketion.herostool.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffd700;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="niketion.herostool.Controller">
    <center>
       <TabPane prefHeight="200.0" prefWidth="200.0" side="LEFT" style="-fx-background-color: #660202;" styleClass=".tab-header-background" stylesheets="@css.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
@@ -22,7 +22,7 @@
                      <center>
                         <ButtonBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #600000;" BorderPane.alignment="CENTER">
                           <buttons>
-                            <Button mnemonicParsing="false" onAction="#processHacker" prefHeight="380.0" prefWidth="306.0" style="-fx-background-color: #600000;" text="Download (Process Hacker)" textFill="WHITE">
+                            <Button mnemonicParsing="false" onAction="#processHacker" prefHeight="358.0" prefWidth="273.0" style="-fx-background-color: #600000;" text="Open (Process Hacker)" textFill="WHITE">
                                  <font>
                                     <Font name="Agency FB" size="23.0" />
                                  </font>
@@ -56,7 +56,7 @@
                      <center>
                         <ButtonBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #600000;" BorderPane.alignment="CENTER">
                            <buttons>
-                              <Button mnemonicParsing="false" onAction="#lastActivityViewer" prefHeight="380.0" prefWidth="306.0" style="-fx-background-color: #600000;" text="Download (LastActivityViewer)" textFill="WHITE">
+                              <Button mnemonicParsing="false" onAction="#lastActivityViewer" prefHeight="380.0" prefWidth="306.0" style="-fx-background-color: #600000;" text="Open (LastActivityViewer)" textFill="WHITE">
                                  <font>
                                     <Font name="Agency FB" size="23.0" />
                                  </font>
@@ -135,6 +135,40 @@
                   </BorderPane>
                </content>
             </Tab>
+            <Tab style="-fx-background-color: #DF6161;" text="JD-GUI">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <ButtonBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #600000;" BorderPane.alignment="CENTER">
+                           <buttons>
+                              <Button mnemonicParsing="false" onAction="#jdGui" prefHeight="380.0" prefWidth="306.0" style="-fx-background-color: #600000;" text="Open (JD-GUI)" textFill="WHITE">
+                                 <font>
+                                    <Font name="Agency FB" size="23.0" />
+                                 </font>
+                              </Button>
+                           </buttons>
+                        </ButtonBar>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: #DF6161;" text="UserAssistView">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <ButtonBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #600000;" BorderPane.alignment="CENTER">
+                           <buttons>
+                              <Button mnemonicParsing="false" onAction="#userAssistView" prefHeight="380.0" prefWidth="306.0" style="-fx-background-color: #600000;" text="Open (UserAssistView)" textFill="WHITE">
+                                 <font>
+                                    <Font name="Agency FB" size="23.0" />
+                                 </font>
+                              </Button>
+                           </buttons>
+                        </ButtonBar>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
             <Tab style="-fx-background-color: #DF6161;" text="All Tools">
                <content>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
@@ -166,7 +200,7 @@
                   <Glow />
                </effect>
             </Text>
-            <Text fill="WHITE" layoutX="6.0" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Version: 0.2">
+            <Text fill="WHITE" layoutX="6.0" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Version: 0.3">
                <font>
                   <Font name="Agency FB" size="13.0" />
                </font>
@@ -175,10 +209,26 @@
       </Pane>
    </bottom>
    <right>
-      <ImageView fitHeight="296.0" fitWidth="795.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+      <ImageView fitHeight="296.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
          <image>
             <Image url="@icons/heros.png" />
          </image>
       </ImageView>
    </right>
+   <top>
+      <Pane prefHeight="22.0" prefWidth="600.0" style="-fx-background-color: #8B0000;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="15.0" fitWidth="12.0" layoutX="581.0" layoutY="5.0" onMouseClicked="#closeButton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/x.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="14.0" fitWidth="11.0" layoutX="561.0" layoutY="9.0" onMouseClicked="#minimize" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/substract.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
 </BorderPane>

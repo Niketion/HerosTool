@@ -1,7 +1,10 @@
 package niketion.herostool;
 
+import javafx.application.Platform;
+import niketion.Main;
 import niketion.herostool.url.URLDownload;
 
+import javax.swing.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -9,8 +12,20 @@ public class Controller {
 
     private String mediafire = "https://www.mediafire.com/";
 
+    public void closeButton() {
+        Platform.exit();
+    }
+
+    public void minimize() {
+        Main.getPrimaryStage().setIconified(true);
+    }
+
     public void processHacker() {
-        getURL(mediafire+"?uzx7s1t3qo4yk5o");
+        try {
+            Runtime.getRuntime().exec(Main.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath() +  "/../othertools/4.exe");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(new JFrame(), "Tool non trovato, re-installalo o metti la cartella 'othertools' nella stessa del programma");
+        }
     }
 
     public void vapeSmasher() {
@@ -25,8 +40,28 @@ public class Controller {
         getURL(mediafire+"?q80dqal27apbfq3");
     }
 
+    public void jdGui() {
+        try {
+            Runtime.getRuntime().exec(Main.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath() +  "/../othertools/1.exe");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(new JFrame(), "Tool non trovato, re-installalo o metti la cartella 'othertools' nella stessa del programma");
+        }
+    }
+
     public void lastActivityViewer() {
-        getURL(mediafire+"?3hn8ufet74ba3bv");
+        try {
+            Runtime.getRuntime().exec("cmd /c \""+Main.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath().replaceAll("/C:", "C:")+"/../othertools/2.exe\"");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(new JFrame(), "Tool non trovato, re-installalo o metti la cartella 'othertools' nella stessa del programma");
+        }
+    }
+
+    public void userAssistView() {
+        try {
+            Runtime.getRuntime().exec(Main.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath() +  "/../othertools/3.exe");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(new JFrame(), "Tool non trovato, re-installalo o metti la cartella 'othertools' nella stessa del programma");
+        }
     }
 
     public void lowAutoclicker() {
